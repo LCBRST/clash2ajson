@@ -2,13 +2,14 @@
 
 把 Clash / Clash Meta 配置转换为 [Anywhere](https://github.com/NodePassProject/Anywhere) 的 AJSON v1 订阅。
 
+> 在线使用：<https://lcbrst.github.io/clash2ajson/>  
 > 开源仓库：<https://github.com/LCBRST/clash2ajson>
 
 **`clash2ajson.html` 是完整的单文件工具**：YAML 解析器和全部逻辑都已内联，双击即可离线使用，配置不会离开本机。页面右上角提供 GitHub 仓库入口。
 
 ## 使用方法
 
-1. 用浏览器打开 `clash2ajson.html`
+1. 用浏览器打开 `index.html` 或 `clash2ajson.html`，也可以直接访问上面的在线地址
 2. 选择 / 拖入 `.yaml` 配置文件，或把内容粘贴进左侧
 3. 可选：填写订阅名称、勾选「生成稳定 id」
 4. 点「转换」，复制结果或下载 `.ajson` 文件（内容即 AJSON v1 文档）
@@ -67,6 +68,7 @@ npm run test:browser   # 用本机 Edge/Chrome 打开成品页面做冒烟测试
 
 ```
 clash2ajson.html   构建产物，可直接分发 / 离线打开
+index.html         同上的构建产物，供 GitHub Pages 根目录直接访问
 src/converter.js   转换核心（纯逻辑，可在 Node 中直接使用）
 src/app.js         页面交互
 src/template.html  页面结构与样式

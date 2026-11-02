@@ -20,6 +20,9 @@ for (const [marker, code] of Object.entries(parts)) {
   html = html.replace(marker, () => safe);
 }
 
-const outPath = path.join(root, 'clash2ajson.html');
-fs.writeFileSync(outPath, html, 'utf8');
-console.log('已生成 clash2ajson.html（' + (Buffer.byteLength(html) / 1024).toFixed(1) + ' KB）');
+// index.html 供 GitHub Pages 根目录直接访问，内容与离线版完全一致
+const outputs = ['clash2ajson.html', 'index.html'];
+for (const file of outputs) {
+  fs.writeFileSync(path.join(root, file), html, 'utf8');
+}
+console.log('已生成 ' + outputs.join(' / ') + '（' + (Buffer.byteLength(html) / 1024).toFixed(1) + ' KB）');
