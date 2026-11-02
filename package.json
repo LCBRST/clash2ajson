@@ -1,0 +1,15 @@
+{
+  "name": "clash2ajson",
+  "version": "1.0.0",
+  "private": true,
+  "description": "把 Clash / Clash Meta 配置转换为 Anywhere AJSON 订阅的单页工具",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LCBRST/clash2ajson.git"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/convert.test.mjs",
+    "test:browser": "node test/browser-check.mjs"
+  }
+}
